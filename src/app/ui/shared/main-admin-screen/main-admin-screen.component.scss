@@ -1,0 +1,98 @@
+@import '../../../../assets/scss/variables.scss';
+
+.wrapper-team,
+.wrapper-game {
+	padding: 30px 10px 0;
+
+	.create-btn.mat-mdc-raised-button {
+		background: #151515;
+		border: 1px solid $base-color;
+		color: $base-color;
+		width: 120px;
+		font-size: 16px;
+	}
+}
+
+.wrapper-heading {
+	margin-bottom: 20px;
+
+	h1 {
+		margin: 0;
+		color: $base-color;
+		border-bottom: 1px solid $base-color;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size: 25px;
+	}
+}
+
+.wrapper-row {
+	margin-bottom: 30px;
+}
+
+.flex-layout {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+p {
+	margin: 0;
+}
+
+.number {
+	background: #151515;
+	border-radius: 50%;
+	color: $base-content;
+	border: 1px solid $base-dark;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: -2px 5px 9px -2px rgb(216 180 106);
+	margin-right: 10px;
+	width: 42px;
+	height: 42px;
+	box-sizing: border-box;
+}
+
+.team-row {
+	background: #151515;
+	border-radius: 20px;
+	color: $base-content;
+	border: 1px solid $base-dark;
+	padding: 5px 10px;
+	width: calc(100% - 52px);
+	box-sizing: border-box;
+	box-shadow: -2px 5px 9px -2px rgb(216 180 106);
+}
+
+mat-icon {
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+
+.wrapper-button {
+	button {
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		border: none;
+		margin: 0 0 0 4px;
+	}
+}
+
+.active {
+	color: #cf8634;
+}
+
+a {
+	text-decoration: none;
+	color: $base-content;
+	flex-grow: 1;
+}

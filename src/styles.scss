@@ -1,0 +1,43 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$quest-primary: mat.define-palette(mat.$gray-palette);
+$quest-accent: mat.define-palette(mat.$light-green-palette, A200, A100, A400);
+
+$quest-warn: mat.define-palette(mat.$red-palette);
+
+$quest-theme: mat.define-light-theme(
+	(
+		color: (
+			primary: $quest-primary,
+			accent: $quest-accent,
+			warn: $quest-warn,
+		),
+	)
+);
+
+@include mat.all-component-themes($quest-theme);
+@import './assets/scss/variables.scss';
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: top;
+}
+:host {
+	height: 100%;
+	display: block;
+}
+
+button {
+	cursor: pointer;
+}

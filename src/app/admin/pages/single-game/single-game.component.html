@@ -1,0 +1,53 @@
+<div
+	*ngIf="game$ | async as game"
+	class="wrapper-single-game">
+	<div class="flex-layout">
+		<h2>Game</h2>
+		<span>{{ game?.gameName }}</span>
+	</div>
+	<div class="flex-layout">
+		<h2>Author</h2>
+		<span>{{ game?.author }}</span>
+	</div>
+	<div class="flex-layout">
+		<h2>Status</h2>
+		<span>{{ game?.isActive }}</span>
+	</div>
+	<button>Deactivate</button>
+	<a href="">Vew game progress</a>
+
+	<h3>Teams</h3>
+	<button (click)="addTeam()">New team</button>
+	<div
+		*ngFor="let team of game.teams; let i = index"
+		class="wrapper-teams flex-layout">
+		<span>{{ i + 1 }}</span>
+		<h4>{{ team.username }}</h4>
+	</div>
+
+	<h3>Tasks</h3>
+	<button (click)="openCreateTaskDialog()">New task</button>
+	<div
+		*ngFor="let task of game.tasks; let i = index"
+		class="wrapper-teams flex-layout">
+		<span></span>
+		<h4>Task{{ i + 1 }}</h4>
+		<div class="wrapper-button">
+			<button (click)="onEditTask(task)">
+				<mat-icon
+					class="edit"
+					fontIcon="edit"></mat-icon>
+			</button>
+			<button (click)="onDeleteTask(task.id)">
+				<mat-icon
+					class="delete"
+					fontIcon="delete"></mat-icon>
+			</button>
+		</div>
+	</div>
+
+	<div>
+		<h4>Finished message:</h4>
+		<span>{{ game.finalMessage }}</span>
+	</div>
+</div>

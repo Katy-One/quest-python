@@ -1,0 +1,15 @@
+<div class="wrapper-team">
+	<h1>TEAM - {{ (team$ | async)?.username }}</h1>
+	<div class="wrapper-status">
+		<mat-icon
+			class="status"
+			[ngClass]="{ active: (team$ | async)?.isActive }"
+			aria-hidden="false"
+			fontIcon="circle"></mat-icon>
+
+		<span>is in active</span>
+	</div>
+	<div class="wrapper-motto">
+		<strong>motto:</strong> <span>{{ (team$ | async)?.motto }}</span>
+	</div>
+</div>
